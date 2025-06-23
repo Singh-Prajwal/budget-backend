@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-v3+x8z=lzn%*-jyc-b6uh*4)ngqqe6xq5n31r5fv2nb=_u%+nu
 DEBUG = False
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','https://budget-frontend-gray.vercel.app/']
 
 
 # Application definition
@@ -80,6 +80,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173", # Default Vite port
     "http://127.0.0.1:5173",
+    "https://budget-frontend-gray.vercel.app"
 ]
 
 ROOT_URLCONF = 'budget_project.urls'
