@@ -165,20 +165,20 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-if 'DATABASE_URL' in os.environ:
-    # This is the production environment (on Render)
-    DATABASES = {
-        'default': dj_database_url.config(
-            conn_max_age=600,
-            conn_health_checks=True,
-            ssl_require=True,
-        )
-    }
-else:
-    # This is the local development environment
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+# if 'DATABASE_URL' in os.environ:
+#     # This is the production environment (on Render)
+#     DATABASES = {
+#         'default': dj_database_url.config(
+#             conn_max_age=600,
+#             conn_health_checks=True,
+#             ssl_require=True,
+#         )
+#     }
+# else:
+#     # This is the local development environment
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
